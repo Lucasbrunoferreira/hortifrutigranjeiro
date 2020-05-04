@@ -34,10 +34,3 @@ export const SubmitButtonText = styled.Text`
 	fontFamily: 'sans-serif-medium';
 	fontSize: ${fontSize.small}px;
 `;
-
-export const GuestButtonText = styled.Text`
-	color: ${colors.silver};
-	fontFamily: 'sans-serif';
-	fontSize: ${fontSize.small}px;
-	marginTop: ${metrics.doubleBaseSpacing}px;
-`;

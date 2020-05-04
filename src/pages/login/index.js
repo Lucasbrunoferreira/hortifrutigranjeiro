@@ -15,13 +15,11 @@ export default function LoginPage({ navigation }) {
 	const [password, setPassword] = useState('')
 
 	function handleSubmit () {
-		console.log(username, password);
-
 		authentication(username, password)
 			.then((result) => {
 				dispatch(setCurrentUser(result))
 
-				navigation.replace('Produtos')
+				navigation.replace('Home', { screen: 'Products' })
 			})
 			.catch((err) => {
 				showMessage({
@@ -30,6 +28,14 @@ export default function LoginPage({ navigation }) {
 					icon: 'danger'
 				});
 			});
+	}
+
+	function submitAsGuest () {
+		let guestData = {"displayName": "Visitante", "username": "guest"}
+
+		dispatch(setCurrentUser(guestData))
+
+		navigation.replace('Home', { screen: 'Products' })
 	}
 
 	return (
@@ -52,7 +58,7 @@ export default function LoginPage({ navigation }) {
 			</TouchableOpacity>
 
 			<TouchableOpacity>
-				<GuestButtonText >ou entrar como convidado</GuestButtonText>
+				<GuestButtonText onPress={submitAsGuest}>ou entrar como convidado</GuestButtonText>
 			</TouchableOpacity>
 		</Background>
 	);

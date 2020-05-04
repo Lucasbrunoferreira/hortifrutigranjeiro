@@ -1,21 +1,38 @@
 import React from 'react';
-import { View, Text, StatusBar } from 'react-native';
+import { TouchableOpacity, Text, StatusBar } from 'react-native';
 import { useSelector } from 'react-redux'
 import { colors } from '~/styles/colors'
-import { Background } from './style'
+import { Container, EmptyMessage, LogoutBtnText } from './style'
+import { useDispatch } from 'react-redux'
+import { clearCurrentUser } from '~/store/ducks/user'
+
+import ProductItem from './productItem'
 
 
-export default function ProductsPage() {
-	const currentUser = useSelector(state => state.user.currentUser)
+export default function ProductsPage({ navigation }) {
+	const dispatch = useDispatch()
+	const listOfProducts = useSelector(state => state.products)
+
+	function logout() {
+		navigation.replace('Login')
+
+		dispatch(clearCurrentUser())
+	}
 
 	return (
-		<Background>
+		<Container>
 			<StatusBar
 				barStyle="light-content"
 				backgroundColor={colors.secundary}
 			/>
 
-			<Text>Current: { currentUser.displayName }</Text>
-		</Background>
+			<Container>
+				{listOfProducts.length === 0 ? <EmptyMessage>Não há produtos cadastrados...</EmptyMessage> : listOfProducts.map(product => <ProductItem item={product} />)}
+			</Container>
+
+			<TouchableOpacity onPress={logout}>
+				<LogoutBtnText>Sair</LogoutBtnText>
+			</TouchableOpacity>
+		</Container>
 	);
 }

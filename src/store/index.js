@@ -9,7 +9,7 @@ const middlewares = [];
 const persistConfig = {
   key: 'hortifrutigranjeiro',
   storage: AsyncStorage,
-  whitelist: ['shoppingCart', 'user'],
+  whitelist: ['shoppingCart', 'user', 'products'],
   timeout: null,
 };
 

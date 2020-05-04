@@ -1,3 +1,5 @@
+import { concat } from 'lodash';
+
 // ======== Action Types ===========
 export const Types = {
 	ADD_PRODUCT_CART: 'shoppingCart/ADD',
@@ -13,7 +15,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
 	switch (action.type) {
 		case Types.ADD_PRODUCT_CART:
-			return { ...state, listOfProducts: action.payload };
+			return { ...state, listOfProducts: concat(state.listOfProducts, action.payload) };
 
 		case Types.CLEAR_CART:
 			return initialState;

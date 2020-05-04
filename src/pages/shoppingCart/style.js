@@ -13,7 +13,7 @@ export const Background = styled.View`
 
 export const Title = styled.Text`
 	color: ${colors.secundary};
-	fontSize: ${fontSize.wide}px;
+	fontSize: ${fontSize.wide};
 	fontFamily: 'sans-serif-thin';
 `;
 
@@ -22,9 +22,9 @@ export const FormWrapper = styled.View`
 `;
 
 export const Input = styled.TextInput`
-	borderWidth: 1px;
+	borderWidth: 1;
 	borderColor: ${colors.secundary};
-	width: 220px;
+	width: 220;
 	margin: ${metrics.smallSpacing}px;
 	padding: ${metrics.smallSpacing}px;
 `;
@@ -39,5 +39,5 @@ export const GuestButtonText = styled.Text`
 	color: ${colors.silver};
 	fontFamily: 'sans-serif';
 	fontSize: ${fontSize.small}px;
-	marginTop: ${metrics.doubleBaseSpacing}px;
+	marginTop: ${metrics.baseSpacing};
 `;

@@ -8,7 +8,10 @@ export const Types = {
 
 // ======== Reducers ===========
 const initialState = {
-	currentUser: {}
+	currentUser: {
+		displayName: '',
+		username: '',
+	}
 };
 
 export default function reducer(state = initialState, action) {

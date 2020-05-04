@@ -17,7 +17,7 @@ export default function SplashScreen({ navigation }) {
 		Animated.timing(height, { toValue: 150, duration: 1500, useNativeDriver: false }).start();
 
 		setTimeout(() => {
-			isEmpty(currentUser) ? navigation.replace('Login') : navigation.replace('Produtos')
+			isEmpty(currentUser.username) ? navigation.replace('Login') : navigation.replace('Home', { screen: 'RegisterProduct' })
 		}, 2200);
 	})
 
