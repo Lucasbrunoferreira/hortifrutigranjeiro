@@ -11,5 +11,5 @@ export const Background = styled.View`
 
 export const Title = styled.Text`
   color: ${colors.white};
-	fontSize: ${fontSize.wide};
+	fontSize: ${fontSize.wide}px;
 `;

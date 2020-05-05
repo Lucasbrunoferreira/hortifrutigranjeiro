@@ -5,7 +5,6 @@ import { colors } from '~/styles/colors'
 import { Container, EmptyMessage, LogoutBtnText } from './style'
 import { useDispatch } from 'react-redux'
 import { clearCurrentUser } from '~/store/ducks/user'
-
 import ProductItem from './productItem'
 
 
@@ -27,7 +26,7 @@ export default function ProductsPage({ navigation }) {
 			/>
 
 			<Container>
-				{listOfProducts.length === 0 ? <EmptyMessage>Não há produtos cadastrados...</EmptyMessage> : listOfProducts.map(product => <ProductItem item={product} />)}
+				{listOfProducts.length === 0 ? <EmptyMessage>Não há produtos cadastrados...</EmptyMessage> : listOfProducts.map((product, index) => <ProductItem key={index} item={product} />)}
 			</Container>
 
 			<TouchableOpacity onPress={logout}>

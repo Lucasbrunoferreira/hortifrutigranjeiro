@@ -4,40 +4,26 @@ import { colors } from '~/styles/colors'
 import { fontSize } from '~/styles/font'
 import { metrics } from '~/styles/metrics'
 
-export const Background = styled.View`
+export const Container = styled.View`
   flex: 1;
   backgroundColor: ${colors.white};
-  justifyContent: center;
   alignItems: center;
 `;
 
-export const Title = styled.Text`
-	color: ${colors.secundary};
-	fontSize: ${fontSize.wide};
-	fontFamily: 'sans-serif-thin';
-`;
-
-export const FormWrapper = styled.View`
-	margin: ${metrics.doubleBaseSpacing}px;
-`;
-
-export const Input = styled.TextInput`
-	borderWidth: 1;
-	borderColor: ${colors.secundary};
-	width: 220;
-	margin: ${metrics.smallSpacing}px;
-	padding: ${metrics.smallSpacing}px;
-`;
-
-export const SubmitButtonText = styled.Text`
-	color: ${colors.secundary};
-	fontFamily: 'sans-serif-medium';
-	fontSize: ${fontSize.small}px;
-`;
-
-export const GuestButtonText = styled.Text`
-	color: ${colors.silver};
+export const TextTotal = styled.Text`
+	color: ${colors.white};
+	padding: ${metrics.baseSpacing}px;
+	fontSize: ${fontSize.medium}px;
 	fontFamily: 'sans-serif';
-	fontSize: ${fontSize.small}px;
-	marginTop: ${metrics.baseSpacing};
+	backgroundColor: ${colors.primary};
+	textAlign: center;
+	width: ${metrics.screenWidth}px;
+`;
+
+export const ListWrapper = styled.View`
+	justifyContent: space-around;
+	flexWrap: wrap;
+	padding: ${metrics.baseSpacing}px;
+	flexDirection: row;
+	flex: 1;
 `;

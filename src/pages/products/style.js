@@ -12,14 +12,14 @@ export const Container = styled.View`
 
 export const EmptyMessage = styled.Text`
 	color: ${colors.secundary};
-	fontSize: ${fontSize.wide};
+	fontSize: ${fontSize.wide}px;
 	fontFamily: 'sans-serif-thin';
-	paddingVertical: ${metrics.screenHeight / 3};
+	paddingVertical: ${metrics.screenHeight / 3}px;
 `;
 
 export const LogoutBtnText = styled.Text`
 	color: ${colors.secundary};
-	fontSize: ${fontSize.wide};
+	fontSize: ${fontSize.wide}px;
 	fontFamily: 'sans-serif-thin';
 	marginBottom: ${metrics.doubleBaseSpacing}px;
 `;

@@ -5,19 +5,19 @@ import { fontSize } from '~/styles/font'
 import { metrics } from '~/styles/metrics'
 
 export const Wrapper = styled.View`
-	flexDirection: row;
+	flexDirection: column;
 	alignItems: center;
-	justifyContent: space-between;
-	backgroundColor: ${colors.light};
-	width: ${metrics.screenWidth}px;
-	padding: ${metrics.baseSpacing}px;
+	borderColor: ${colors.light};
+	borderWidth: 2px;
+	width: 140px;
+	padding: ${metrics.smallSpacing}px;
 	marginBottom: ${metrics.baseSpacing / 2}px;
 `;
 
 export const TextCode = styled.Text`
 	color: ${colors.secundary};
 	fontSize: ${fontSize.small}px;
-	fontFamily: 'sans-serif';
+	fontFamily: 'sans-serif-thin';
 `;
 
 export const TextDescription = styled.Text`
